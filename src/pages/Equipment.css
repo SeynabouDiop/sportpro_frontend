@@ -1,0 +1,288 @@
+.equipment-filters {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .filter-section {
+    margin-bottom: 2rem;
+  }
+  
+  .filter-section:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filter-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .category-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    color: var(--text-color);
+  }
+  
+  .category-btn:hover {
+    background-color: #d5dbdb;
+  }
+  
+  .category-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .advanced-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .filter-group label {
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+  
+  .form-select,
+  .form-input,
+  .price-input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .form-select:focus,
+  .form-input:focus,
+  .price-input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  .price-range {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .price-input {
+    flex: 1;
+  }
+  
+  .price-input::placeholder {
+    color: #aaa;
+  }
+  
+  .reset-btn {
+    align-self: flex-end;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .equipment-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+  }
+  
+  .equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .equipment-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .badge.unavailable {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .badge.low-stock {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .equipment-img {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .equipment-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .equipment-card:hover .equipment-img img {
+    transform: scale(1.05);
+  }
+  
+  .equipment-info {
+    padding: 1.5rem;
+  }
+  
+  .equipment-category {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  
+  .equipment-info h3 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+  
+  .equipment-description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .equipment-brand {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .equipment-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .spec {
+    background-color: var(--light-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .equipment-footer {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  }
+  
+  .price-stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .equipment-price {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+  }
+  
+  .equipment-stock {
+    font-size: 0.85rem;
+    color: #27ae60;
+  }
+  
+  .equipment-stock.out-of-stock {
+    color: #e74c3c;
+  }
+  
+  .equipment-actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .equipment-actions .btn {
+    flex: 1;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  
+  .add-to-cart-btn,
+  .buy-now-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .no-equipment {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .no-equipment p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .advanced-filters {
+      grid-template-columns: 1fr;
+    }
+    
+    .equipment-actions {
+      flex-direction: column;
+    }
+    
+    .equipment-actions .btn {
+      width: 100%;
+    }
+  }
