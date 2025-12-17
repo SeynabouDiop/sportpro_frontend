@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // URL de base de l'API
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://sportpro-backend-1.onrender.com/api';
 
 // Créer une instance axios avec configuration
 const api = axios.create({
